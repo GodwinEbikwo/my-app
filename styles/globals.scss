@@ -1,3 +1,12 @@
+@font-face {
+  src: url('/fonts/Roslindale-DisplayCondensedRegular-Testing.woff2')
+      format('woff2'),
+    url('/fonts/Roslindale-DisplayCondensedRegular-Testing.woff') format('woff');
+  font-family: 'Roslindale';
+  font-style: normal;
+  font-weight: normal;
+}
+
 @import '../src/utils/variables.scss';
 @import '../src/utils/mixins.scss';
 @import '../styles/image.scss';

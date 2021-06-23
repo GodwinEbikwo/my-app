@@ -12,7 +12,7 @@ export default function Hero() {
                 data-scroll
                 data-scroll-speed="3"
                 data-scroll-position="top">
-                Front end &
+                Digital Designer &
               </span>
             </span>
 

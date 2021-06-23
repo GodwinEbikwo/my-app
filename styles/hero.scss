@@ -19,13 +19,13 @@
     font-weight: 400;
     font-size: clamp(3rem, 17vw, 14rem);
     color: #161616;
-    font-family: 'Roslindale Display Condensed Extra Light', sans-serif;
+    font-family: 'Roslindale Display Condensed Regular', sans-serif;
   }
 
   .h-header_title_line {
     #indent {
       @media (min-width: 375px) and (max-width: 539px) {
-        text-indent: 9.1rem;
+        text-indent: 7.8rem;
       }
     }
 
