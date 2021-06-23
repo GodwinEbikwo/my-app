@@ -1,0 +1,186 @@
+@import '../src/utils/variables.scss';
+@import '../src/utils/mixins.scss';
+@import '../styles/image.scss';
+@import '../styles/header.scss';
+@import '../styles/hero.scss';
+@import '../styles/one.scss';
+@import '../styles/two.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+strong,
+ol,
+ul,
+li,
+form,
+aside,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  background-color: #f3f2ec;
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  width: 7px;
+  margin: 2px;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: grabbing;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-feature-settings: 'kern';
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  overscroll-behavior-y: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: -0.011em;
+}
+
+h2,
+h3,
+h4,
+p {
+  letter-spacing: -0.011em;
+  hyphens: auto;
+  word-break: break-word;
+}
+
+h1 {
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  font-size: clamp(3rem, 4vw, 3.5rem);
+  @supports not (font-size: clamp(3rem, 3vw, 3.5rem)) {
+    font-size: min(max(3rem, 3vw), 3.5rem);
+  }
+}
+
+/* utility container classes */
+.container {
+  margin: 0 auto;
+  max-width: 140rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  &.x-sml-ptb {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  &.sml-ptb {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &.large-ptb {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* utility flex classes */
+.flex {
+  display: flex;
+
+  &.ai-jc {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.sb {
+    justify-content: space-between;
+  }
+
+  &.fd-c {
+    flex-direction: column;
+  }
+
+  &.fd-r {
+    flex-direction: row;
+  }
+}

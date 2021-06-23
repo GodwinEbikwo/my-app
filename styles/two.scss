@@ -1,0 +1,16 @@
+.two {
+  .t-header_line {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    transform: scaleX(0);
+    transition: transform 1.2s ease;
+
+    &.is-inview {
+      transform: scaleX(1.5);
+      transition-delay: 0.6s;
+    }
+  }
+}

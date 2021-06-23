@@ -1,0 +1,51 @@
+.header {
+  .header_title {
+    letter-spacing: -0.02em;
+  }
+
+  .links {
+    & > span {
+      display: inline-block;
+      padding: 0 1rem;
+      letter-spacing: -0.02em;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .header_heading_label {
+    display: block;
+    transition: transform 0s $easing;
+    transform: translateY(-60px);
+
+    html.is-ready & {
+      transform: none;
+      transition-duration: 0.8s;
+    }
+
+    html.is-ready .o-layout_item:nth-child(2) & {
+      transition-delay: 0.1s;
+    }
+  }
+
+  .h-header_line {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 1s $easing;
+    @media (max-width: $to-small) {
+      margin: 0 1.25rem;
+    }
+
+    @media (min-width: $from-medium) {
+      margin: 0 3.25rem;
+    }
+
+    html.is-ready & {
+      transform: scaleX(1);
+    }
+  }
+}
