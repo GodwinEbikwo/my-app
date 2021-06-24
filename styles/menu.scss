@@ -1,0 +1,25 @@
+.menu {
+  .menu_styles {
+    outline: none;
+    position: relative;
+    background-color: var(--dark);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 10%;
+    min-width: 490px;
+    bottom: 0;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.18, 1) 0.1s;
+    will-change: transform;
+    z-index: 5;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    &.menu_open {
+      transform: translate3d(0, 0, 0);
+      transition: transform 1s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+  }
+}
