@@ -1,7 +1,8 @@
 .hero {
   position: relative;
+  background-color: #93b0bb;
   @media (max-width: $to-small) {
-    height: 90vh;
+    height: 80vh;
     min-height: 340px;
   }
 
@@ -11,7 +12,7 @@
   }
 
   @media (min-width: $from-medium) {
-    height: 91vh;
+    height: 94vh;
     min-height: rem(750px);
   }
 
@@ -19,13 +20,14 @@
     @media (max-width: $to-small) {
       margin-top: calc(60vh / 3);
     }
-
-    margin-top: calc(60vh / 4);
+    margin-top: calc(60vh / 8);
     P {
       line-height: 1.2;
       font-weight: 500;
       letter-spacing: -0.03em;
       text-align: center;
+
+      color: #fff;
     }
   }
 
@@ -47,10 +49,12 @@
   }
 
   .h-header_title {
-    font-weight: 500;
-    font-size: clamp(3rem, 12vw, 12rem);
+    font-weight: 400;
+    font-size: clamp(3rem, 13vw, 13rem);
     text-align: center;
-    font-family: 'Roslindale', sans-serif;
+    font-family: 'Roslindale-Light', Inter, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
   }
 
   .h-header_title_line {
@@ -85,10 +89,11 @@
     bottom: 3vw;
     left: 0;
     right: 0;
+    color: #fff;
     padding: 0 1.5rem;
     @media (min-width: $from-medium) {
       padding: 0 3rem;
-      bottom: 1vw;
+      bottom: 2vw;
     }
   }
 }

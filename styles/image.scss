@@ -5,12 +5,12 @@
 .b-image_wrapper {
   position: relative;
   overflow: hidden;
-  background-color: hsl(0, 11%, 81%);
+  // background-color: hsl(196, 23%, 65%);
 }
 
 .b-image {
   opacity: 0.75;
-  mix-blend-mode: multiply;
+  // mix-blend-mode: multiply;
 
   .img {
     width: 100%;

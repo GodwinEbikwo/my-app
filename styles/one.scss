@@ -1,7 +1,65 @@
 .one {
+  position: relative;
+  min-height: 100vh;
+  background-color: #111;
+
   @media (min-width: $from-medium) {
-    height: 90vh;
-    min-height: rem(750px);
+    min-height: 100vh;
+  }
+
+  .one_title {
+    font-weight: 400;
+    font-size: clamp(3rem, 13vw, 13rem);
+    text-align: center;
+    font-family: 'Roslindale', sans-serif;
+    color: #fff;
+    margin-bottom: 4rem;
+  }
+
+  .one_title_line {
+    display: block;
+    line-height: 0.9;
+
+    .is-inview & {
+      transform: none;
+      opacity: 1;
+      transition-duration: 0.8s;
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.1s;
+        }
+      }
+    }
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .o-middle {
+    margin-bottom: 4rem;
+    P {
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .icon {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12vw;
+    }
+
+    .arrow {
+      transform: rotate(90deg);
+      width: 30px;
+      object-fit: fill;
+      vertical-align: middle;
+      display: inline-block;
+      max-width: none;
+    }
   }
 
   .img-container {
@@ -27,6 +85,30 @@
     html.is-ready & {
       opacity: 1;
       transform: none;
+    }
+  }
+
+  .gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    .smiley {
+      width: 7.1vw;
+      height: 7.1vw;
+      display: block;
+      animation: rotation 5s infinite linear;
+      will-change: transform;
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
     }
   }
 

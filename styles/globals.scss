@@ -7,9 +7,28 @@
   font-weight: normal;
 }
 
+@font-face {
+  src: url('/fonts/Roslindale-DisplayCondensedLight-Testing.woff2')
+      format('woff2'),
+    url('/fonts/Roslindale-DisplayCondensedLight-Testing.woff') format('woff');
+  font-family: 'Roslindale-Light';
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  src: url('/fonts/Roslindale-DisplayCondensedExtraLightItalic-Testing.woff2')
+      format('woff2'),
+    url('/fonts/Roslindale-DisplayCondensedExtraLightItalic-Testing.woff')
+      format('woff');
+  font-family: 'Roslindale-Italic';
+  font-style: normal;
+  font-weight: normal;
+}
+
 @import '../src/utils/variables.scss';
 @import '../src/utils/mixins.scss';
 @import '../styles/image.scss';
+@import '../styles/banner.scss';
 @import '../styles/header.scss';
 @import '../styles/hero.scss';
 @import '../styles/one.scss';
@@ -232,11 +251,12 @@ h1 {
   &::before {
     content: '';
     position: absolute;
-    bottom: 0.5vw;
+    bottom: 1.5vw;
     left: 0;
     right: 0;
     height: 1px;
-    background-color: rgba(16, 16, 16, 0.8);
+    // background-color: rgba(16, 16, 16, 0.6);
+    background-color: #fff;
     transform: scaleX(0);
     transition: transform 1s $easing;
 

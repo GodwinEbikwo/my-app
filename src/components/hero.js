@@ -12,7 +12,7 @@ export default function Hero() {
                 data-scroll
                 data-scroll-speed="3"
                 data-scroll-position="top">
-                A small knitting
+                Hi there
               </span>
             </span>
 
@@ -22,7 +22,16 @@ export default function Hero() {
                 data-scroll
                 data-scroll-speed="2"
                 data-scroll-position="top">
-                studio...
+                we are bluu lime
+              </span>
+            </span>
+            <span className="h-header_title_line">
+              <span
+                id="indent"
+                data-scroll
+                data-scroll-speed="2"
+                data-scroll-position="top">
+               Studio
               </span>
             </span>
           </h1>
