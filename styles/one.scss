@@ -20,18 +20,6 @@
     display: block;
     line-height: 0.9;
 
-    .is-inview & {
-      transform: none;
-      opacity: 1;
-      transition-duration: 0.8s;
-
-      @for $i from 1 through 3 {
-        &:nth-child(#{$i}) {
-          transition-delay: $i * 0.1s;
-        }
-      }
-    }
-
     span {
       display: inline-block;
     }

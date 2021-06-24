@@ -28,11 +28,11 @@
 @import '../src/utils/variables.scss';
 @import '../src/utils/mixins.scss';
 @import '../styles/image.scss';
-@import '../styles/banner.scss';
+// @import '../styles/banner.scss';
 @import '../styles/header.scss';
 @import '../styles/hero.scss';
 @import '../styles/one.scss';
-@import '../styles/two.scss';
+// @import '../styles/two.scss';
 
 *,
 *::before,
@@ -244,30 +244,3 @@ h1 {
 }
 
 //seperator
-.seperator {
-  display: block;
-  height: 1px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 1.5vw;
-    left: 0;
-    right: 0;
-    height: 1px;
-    // background-color: rgba(16, 16, 16, 0.6);
-    background-color: #fff;
-    transform: scaleX(0);
-    transition: transform 1s $easing;
-
-    html.is-ready & {
-      transform: scaleX(1);
-    }
-    @media (max-width: $to-small) {
-      margin: 0 1.25rem;
-    }
-    @media (min-width: $from-medium) {
-      margin: 0 3.25rem;
-    }
-  }
-}
