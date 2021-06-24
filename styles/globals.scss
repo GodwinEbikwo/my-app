@@ -5,6 +5,7 @@
   font-family: 'Roslindale';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
   font-family: 'Roslindale-Light';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 @font-face {
   src: url('/fonts/Roslindale-DisplayCondensedExtraLightItalic-Testing.woff2')
@@ -23,6 +25,7 @@
   font-family: 'Roslindale-Italic';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 
 @import '../src/utils/variables.scss';
