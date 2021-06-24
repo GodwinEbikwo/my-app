@@ -19,6 +19,8 @@ export default function Home() {
         <One />
         <Two />
         <One />
+        <One />
+        <One />
       </Layout>
     </SmoothScrollProvider>
   );

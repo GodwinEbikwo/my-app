@@ -1,6 +1,6 @@
 .hero {
   @media (max-width: $to-small) {
-    height: 42vh;
+    height: 50vh;
     min-height: 340px;
   }
 
@@ -16,18 +16,19 @@
 
   .h-header_title {
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: clamp(3rem, 15.5vw, 14rem);
+    font-weight: 500;
+    font-size: clamp(3rem, 15vw, 14rem);
     color: #161616;
-    font-family: 'Roslindale Display Condensed Regular', sans-serif;
+    letter-spacing: -0.09em;
+    // font-family: 'Roslindale', sans-serif;
   }
 
   .h-header_title_line {
-    #indent {
-      @media (min-width: 375px) and (max-width: 539px) {
-        text-indent: 7.8rem;
-      }
-    }
+    // #indent {
+    //   @media (min-width: 375px) and (max-width: 539px) {
+    //     text-indent: 7.8rem;
+    //   }
+    // }
 
     display: block;
     opacity: 0;
@@ -36,7 +37,7 @@
     transform: translateY(100%) rotateX(-75deg);
     transition: opacity 0s $Power2EaseOut, transform 0s $Power2EaseOut;
     will-change: transform;
-    line-height: 0.9;
+    line-height: 0.85;
 
     html.is-ready & {
       transform: none;
@@ -63,6 +64,7 @@
     padding: 0 1.5rem;
     @media (min-width: $from-medium) {
       padding: 0 3rem;
+      bottom: 1.5vw;
     }
   }
 

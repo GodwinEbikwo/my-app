@@ -114,7 +114,7 @@ html.has-scroll-dragging {
 
 body {
   min-height: 100vh;
-  width: 100%;
+  min-width: 100%;
   font-feature-settings: 'kern';
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
@@ -190,6 +190,35 @@ h1 {
   }
 
   &.fd-r {
-    flex-direction: row;
+    flex-direction: row-reverse;
+    @media (min-width: $from-medium) {
+      flex-direction: row;
+    }
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.flex-end {
+    justify-content: flex-end;
+  }
+
+  &.w-25 {
+    @media (min-width: $from-medium) {
+      width: 25%;
+    }
+  }
+
+  &.w-50 {
+    @media (min-width: $from-medium) {
+      width: 50%;
+    }
+  }
+
+  &.w-75 {
+    @media (min-width: $from-medium) {
+      width: 75%;
+    }
   }
 }
