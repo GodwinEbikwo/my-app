@@ -5,34 +5,7 @@ export default function Hero() {
     <section className="hero" data-scroll-section>
       <div className="container large-ptb">
         <div className="flex ai-jc fd-c">
-          {/* <h1 className="h-header_title" data-scroll>
-            <span className="h-header_title_line">
-              <span
-                data-scroll
-                data-scroll-speed="3"
-                data-scroll-position="top">
-                Hi there
-              </span>
-            </span>
-
-            <span className="h-header_title_line">
-              <span
-                data-scroll
-                data-scroll-speed="2"
-                data-scroll-position="top">
-                we are bluu lime
-              </span>
-            </span>
-
-            <span className="h-header_title_line">
-              <span
-                data-scroll
-                data-scroll-speed="2"
-                data-scroll-position="top">
-               studio
-              </span>
-            </span>
-          </h1> */}
+     
 
           <h1 className="h-header_title" data-scroll>
             <span className="h-header_title_line">
@@ -50,19 +23,19 @@ export default function Hero() {
                 data-scroll
                 data-scroll-speed="2"
                 data-scroll-position="top">
-                we're bluu lime
+                we are bluu lime
               </span>
               <br />
             </span>
 
-            {/* <span className="h-header_title_line">
+            <span className="h-header_title_line">
               <span
                 data-scroll
                 data-scroll-speed="1"
                 data-scroll-position="top">
                 studio
               </span>
-            </span> */}
+            </span>
           </h1>
 
           <div className="h-summary" data-scroll>
