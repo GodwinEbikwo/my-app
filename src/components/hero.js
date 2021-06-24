@@ -40,7 +40,7 @@ export default function Hero() {
                 data-scroll
                 data-scroll-speed="3"
                 data-scroll-position="top">
-                Hi there
+                Hello
               </span>
               <br />
             </span>
@@ -50,19 +50,19 @@ export default function Hero() {
                 data-scroll
                 data-scroll-speed="2"
                 data-scroll-position="top">
-                we are bluu lime
+                we're bluu lime
               </span>
               <br />
             </span>
 
-            <span className="h-header_title_line">
+            {/* <span className="h-header_title_line">
               <span
                 data-scroll
                 data-scroll-speed="1"
                 data-scroll-position="top">
                 studio
               </span>
-            </span>
+            </span> */}
           </h1>
 
           <div className="h-summary" data-scroll>

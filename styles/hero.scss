@@ -27,7 +27,7 @@
       letter-spacing: -0.03em;
       text-align: center;
 
-      color: #fff;
+      color: #333;
     }
   }
 
@@ -36,7 +36,7 @@
     font-size: clamp(3rem, 13vw, 13rem);
     text-align: center;
     font-family: 'Roslindale-Light', Inter, sans-serif;
-    color: #fff;
+    color: #161616;
     text-transform: uppercase;
     line-height: 0.85;
   }
@@ -89,7 +89,7 @@
     bottom: 3vw;
     left: 0;
     right: 0;
-    color: #fff;
+    color: #333;
     padding: 0 1.5rem;
     @media (min-width: $from-medium) {
       padding: 0 3rem;
@@ -109,7 +109,7 @@
       right: 0;
       height: 1px;
       // background-color: rgba(16, 16, 16, 0.6);
-      background-color: #fff;
+      background-color: #161616;
       transform: scaleX(0);
       transition: transform 1s $easing;
 
