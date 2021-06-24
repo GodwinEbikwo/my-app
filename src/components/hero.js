@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section className="hero" data-scroll-section>
-      <div className="container sml-ptb">
+      <div className="container large-ptb">
         <div className="flex ai-jc fd-c">
           <h1 className="h-header_title" data-scroll>
             <span className="h-header_title_line">
@@ -27,7 +27,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="h-summary">
+          <div className="h-summary" data-scroll>
             <div className="middle">
               <p>
                 <span>...BASED UNDER THE COLD IN BARNSLEY,</span> <br />
@@ -53,9 +53,8 @@ export default function Hero() {
               <span>2021</span>
             </div>
           </div>
-
-          <hr className="h-header_line" data-scroll data-scroll-offset="100" />
         </div>
+        <div className="seperator" data-scroll data-scroll-offset="100" />
       </div>
     </section>
   );

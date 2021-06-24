@@ -34,23 +34,29 @@
     }
   }
 
-  .h-header_line {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transform: scaleX(0);
-    transition: transform 1s $easing;
-    @media (max-width: $to-small) {
-      margin: 0 1.25rem;
-    }
+  .h-seperator {
+    display: block;
 
-    @media (min-width: $from-medium) {
-      margin: 0 3.25rem;
-    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0.5vw;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: rgba(16, 16, 16, 0.8);
+      transform: scaleX(0);
+      transition: transform 1s $easing;
 
-    html.is-ready & {
-      transform: scaleX(1);
+      html.is-ready & {
+        transform: scaleX(1);
+      }
+      @media (max-width: $to-small) {
+        margin: 0 1.25rem;
+      }
+      @media (min-width: $from-medium) {
+        margin: 0 3.25rem;
+      }
     }
   }
 }

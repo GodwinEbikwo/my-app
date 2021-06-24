@@ -16,11 +16,11 @@ export default function Home() {
 
         <Header />
         <Hero />
-        <One />
+        {/* <One />
         <Two />
         <One />
         <One />
-        <One />
+        <One /> */}
       </Layout>
     </SmoothScrollProvider>
   );

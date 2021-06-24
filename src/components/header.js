@@ -10,7 +10,9 @@ export default function Header() {
           </div>
 
           <div className="header_name">
-            <h2 className="header_title header_heading_label h_logo">BLUU LIME</h2>
+            <h2 className="header_title header_heading_label h_logo">
+              BLUU LIME
+            </h2>
           </div>
 
           <div className="links">
@@ -20,20 +22,9 @@ export default function Header() {
               </Link>
             </span>
 
-            {/* <span className="header_heading_label">
-              <Link href="/">
-                <a>Cases</a>
-              </Link>
-            </span> */}
-
-            {/* <span className="header_heading_label">
-              <Link href="/">
-                <a>Menu</a>
-              </Link>
-            </span> */}
           </div>
         </div>
-        <hr className="h-header_line" data-scroll data-scroll-offset="100" />
+        <div className="h-seperator" data-scroll data-scroll-offset="100" />
       </div>
     </section>
   );
