@@ -15,11 +15,13 @@ export default function Home() {
           <title>{siteTitle}</title>
           <meta name="description" content={description} />
         </Head>
-        {/* <Banner /> */}
+        {/* */}
         {/* <Header />
         <Hero /> */}
+        <Header />
         <One />
         <Two />
+        <Banner />
 
         {/*
         

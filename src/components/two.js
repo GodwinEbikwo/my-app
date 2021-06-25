@@ -59,6 +59,9 @@ export default function Two() {
                 <span>INFO@BLUULIMESTUDIO.COM</span>{' '}
               </h2>
             </div>
+
+
+            
           </div>
         </div>
       </div>
