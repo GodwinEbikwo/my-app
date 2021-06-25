@@ -5,9 +5,7 @@ export default function Header() {
     <section className="header" data-scroll-section>
       <div className="container x-sml-ptb">
         <div className="flex sb wrap">
-          <div className="header_name">
-            <h2 className="header_title header_heading_label">Daniel Begoli</h2>
-          </div>
+          
 
           <div className="header_name">
             <h2 className="header_title header_heading_label h_logo">

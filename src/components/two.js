@@ -1,6 +1,19 @@
 import Image from 'next/image';
 
+import { useEffect, useState } from 'react';
+
+const work = ['new projects', 'parties', 'a quick chat', 'free money'];
+
 export default function Two() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const tick = () => setIndex((i) => i + 1);
+
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="two" data-scroll-section>
       <div className="container large-ptb">
@@ -23,7 +36,7 @@ export default function Two() {
                 <span className="inter">HAPPY FOR</span>
               </span>
               <span className="one_title_line">
-                <span>new projects</span>
+                <span>{work[index % work.length]}</span>
               </span>
             </h1>
 
@@ -59,9 +72,6 @@ export default function Two() {
                 <span>INFO@BLUULIMESTUDIO.COM</span>{' '}
               </h2>
             </div>
-
-
-            
           </div>
         </div>
       </div>

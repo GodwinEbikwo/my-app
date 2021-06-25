@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+
 export default function One() {
   return (
     <section className="one" data-scroll-section>
@@ -22,7 +23,7 @@ export default function One() {
             </div>
             <h1 className="one_title" data-scroll>
               <span className="one_title_line">
-                <span>A small knitting</span>
+                <span>A small crochet</span>
               </span>
 
               <span className="one_title_line">
@@ -115,6 +116,7 @@ export default function One() {
           </div>
         </div>
       </div>
+    
     </section>
   );
 }
