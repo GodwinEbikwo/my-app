@@ -35,7 +35,7 @@
 @import '../styles/header.scss';
 @import '../styles/hero.scss';
 @import '../styles/one.scss';
-// @import '../styles/two.scss';
+@import '../styles/two.scss';
 
 *,
 *::before,
@@ -143,7 +143,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   overscroll-behavior-y: none;
   color: #161616;
 }

@@ -1,5 +1,106 @@
 .two {
-  .t-header_line {
+  background-color: #a0e7e5;
+  // background-color: hsl(350, 100%, 84%);
+  position: relative;
+  // height: 100vh;
+
+  @media (min-width: $from-medium) {
+    min-height: 100vh;
+  }
+
+  .inter {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.09em;
+  }
+
+  .one_title {
+    font-weight: 400;
+    font-size: clamp(3rem, 13vw, 13rem);
+    text-align: center;
+    font-family: 'Roslindale-Italic', sans-serif;
+    margin-bottom: 3rem;
+  }
+
+  .one_title_line {
+    display: block;
+    line-height: 0.9;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .o-middle {
+    margin-bottom: 3rem;
+
+    P {
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 500;
+      font-size: clamp(2.5rem, 2.8vw, 2.8rem);
+      letter-spacing: -0.06em;
+      text-decoration: underline;
+    }
+  }
+
+  .img-container {
+    padding-bottom: 25px;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 50px;
+    }
+  }
+
+  p {
+    margin: 1.5rem 0;
+  }
+
+  .o-summary {
+    margin: 1.5rem auto;
+  }
+
+  .o-summary_text {
+    opacity: 0;
+    transform: translateY(70px);
+    transition: transform 1s $easing;
+
+    html.is-ready & {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .smiley {
+      width: clamp(3vw, 7vw, 7rem);
+      height: clamp(3vw, 7vw, 7rem);
+      display: block;
+      animation: rotation 5s infinite linear;
+      will-change: transform;
+
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+      }
+    }
+  }
+
+  .h-header_line {
     position: absolute;
     bottom: 0;
     right: 0;
