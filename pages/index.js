@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { SmoothScrollProvider } from '../src/utils/SmoothScroll';
-import Layout, { siteTitle } from '../src/components/layout';
+import Layout, { siteTitle, description } from '../src/components/layout';
 import Header from '../src/components/header';
 import Hero from '../src/components/hero';
 import One from '../src/components/one';
@@ -13,6 +13,8 @@ export default function Home() {
       <Layout>
         <Head>
           <title>{siteTitle}</title>
+          <meta name="description" content={description} />
+          
         </Head>
         {/* <Banner /> */}
         <Header />
