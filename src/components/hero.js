@@ -1,19 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
 
 export default function Hero() {
   return (
     <section className="hero" data-scroll-section>
+  
       <div className="container large-ptb">
         <div className="flex ai-jc fd-c">
-     
-
           <h1 className="h-header_title" data-scroll>
             <span className="h-header_title_line">
               <span
                 data-scroll
                 data-scroll-speed="3"
                 data-scroll-position="top">
-                Hello
+                Hi there
               </span>
               <br />
             </span>
@@ -27,18 +27,9 @@ export default function Hero() {
               </span>
               <br />
             </span>
-
-            <span className="h-header_title_line">
-              <span
-                data-scroll
-                data-scroll-speed="1"
-                data-scroll-position="top">
-                studio
-              </span>
-            </span>
           </h1>
 
-          <div className="h-summary" data-scroll>
+          {/* <div className="h-summary" data-scroll>
             <div className="middle">
               <p>
                 <span>...BASED UNDER THE COLD IN BARNSLEY,</span> <br />
@@ -53,9 +44,9 @@ export default function Hero() {
                 <span>VACCINE</span>
               </p>
             </div>
-          </div>
+          </div> */}
 
-          <div className="flex sb h-summary p-absolute" data-scroll>
+          {/* <div className="flex sb h-summary p-absolute" data-scroll>
             <div className="h-left">
               <span>Selected Works</span>
             </div>
@@ -63,9 +54,9 @@ export default function Hero() {
             <div className="h-right">
               <span>2021</span>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="seperator" data-scroll data-scroll-offset="100" />
+        {/* <div className="seperator" data-scroll data-scroll-offset="100" /> */}
       </div>
     </section>
   );

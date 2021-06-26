@@ -2,26 +2,23 @@
   // background: rgb(147, 176, 187);
   // background-color: #93b0bb;
   background-color: #111;
+  color: rgba(255, 255, 255, 0.9);
+
   .header_title {
-    letter-spacing: -0.02em;
-    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.03em;
   }
 
   .h_logo {
     font-weight: 600;
     letter-spacing: -0.06em;
-    color: rgba(255, 255, 255);
   }
 
   .links {
-    & > span {
+    & > button {
       display: inline-block;
       padding: 0 1rem;
-      letter-spacing: -0.02em;
-      color: rgba(255, 255, 255, 0.8);
-      &:last-child {
-        padding-right: 0;
-      }
+      letter-spacing: -0.06em;
+      color: rgba(255, 255, 255, 0.9);
     }
   }
 
@@ -50,7 +47,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: #111;
       transform: scaleX(0);
       transition: transform 1s $easing;
 

@@ -1,8 +1,8 @@
 .hero {
   position: relative;
-  background-color: #93b0bb;
+  // background-color: #a0e7e5;
   @media (max-width: $to-small) {
-    height: 80vh;
+    // height: 80vh;
     min-height: 340px;
   }
 
@@ -12,7 +12,7 @@
   }
 
   @media (min-width: $from-medium) {
-    height: 94vh;
+    height: 90vh;
     min-height: rem(750px);
   }
 
@@ -30,31 +30,66 @@
     }
   }
 
+  // .h-header_title {
+  //   font-weight: 400;
+  //   font-size: clamp(3rem, 13vw, 13rem);
+  //   text-align: center;
+  //   font-family: 'Roslindale-Italic', Inter, sans-serif;
+  //   color: #161616;
+  //   text-transform: uppercase;
+  //   line-height: 0.85;
+  // }
   .h-header_title {
     font-weight: 400;
-    font-size: clamp(3rem, 13vw, 13rem);
     text-align: center;
-    font-family: 'Roslindale-Light', Inter, sans-serif;
-    color: #161616;
-    text-transform: uppercase;
+    padding: rem($unit-small) 0;
+    perspective: 600px;
+    -webkit-perspective: 600px;
+    font-family: 'Roslindale', Inter, sans-serif;
+    font-size: clamp(3rem, 13vw, 13rem);
     line-height: 0.85;
+    text-transform: uppercase;
   }
 
+  // .h-header_title_line {
+  //   display: initial;
+  //   opacity: 0;
+  //   transform-origin: center top;
+  //   transform-style: preserve-3d;
+  //   transform: translateY(100%) rotateX(-80deg);
+  //   transition: opacity 0s $Power2EaseOut, transform 0s $Power2EaseOut;
+  //   will-change: transform;
+
+  //   html.is-ready & {
+  //     transform: none;
+  //     opacity: 1;
+  //     transition-duration: 0.8s;
+
+  //     @for $i from 1 through 4 {
+  //       &:nth-child(#{$i}) {
+  //         transition-delay: $i * 0.1s;
+  //       }
+  //     }
+  //   }
+
+  //   span {
+  //     display: inline-block;
+  //   }
+  // }
   .h-header_title_line {
-    display: initial;
+    display: block;
     opacity: 0;
     transform-origin: center top;
     transform-style: preserve-3d;
     transform: translateY(100%) rotateX(-80deg);
     transition: opacity 0s $Power2EaseOut, transform 0s $Power2EaseOut;
-    // will-change: transform;
 
     html.is-ready & {
       transform: none;
       opacity: 1;
       transition-duration: 0.8s;
 
-      @for $i from 1 through 3 {
+      @for $i from 1 through 2 {
         &:nth-child(#{$i}) {
           transition-delay: $i * 0.1s;
         }
@@ -63,6 +98,11 @@
 
     span {
       display: inline-block;
+    }
+
+    &.-version {
+      text-transform: none;
+      font-size: 0;
     }
   }
 
