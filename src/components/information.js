@@ -12,7 +12,7 @@ export function Information() {
       yPercent: 100,
       duration: 1,
       delay: 0.8,
-      ease: 'Power3.easeOut',
+      ease: 'power3.easeOut',
       stagger: {
         amount: 0.5,
       },
@@ -22,7 +22,7 @@ export function Information() {
         {
           yPercent: 100,
           duration: 1,
-          ease: 'Power3.easeOut',
+          ease: 'power3.easeOut',
           stagger: {
             amount: 0.5,
           },
