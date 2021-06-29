@@ -63,7 +63,6 @@ const CtaContainer = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-top: 1px solid var(--border-color);
   height: 100vh;
 `;
 

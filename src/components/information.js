@@ -7,15 +7,22 @@ export function Information() {
 
   useEffect(() => {
     const el = ref.current;
-    const tl = gsap.timeline({});
+    const tl = gsap.timeline({
+      defaults: {
+        duration: 1,
+        ease: 'none',
+      },
+      smoothChildTiming: true,
+      autoRemoveChildren: true,
+    });
     tl.from(el.querySelector('.inforight_title .span_inner'), {
       yPercent: 100,
       duration: 1,
       delay: 0.8,
       ease: 'power3.easeOut',
-      stagger: {
-        amount: 0.5,
-      },
+      // stagger: {
+      //   amount: 0.5,
+      // },
     })
       .from(
         el.querySelector('.info_para .span_inner'),
@@ -23,9 +30,9 @@ export function Information() {
           yPercent: 100,
           duration: 1,
           ease: 'power3.easeOut',
-          stagger: {
-            amount: 0.5,
-          },
+          // stagger: {
+          //   amount: 0.5,
+          // },
         },
         '-=.7'
       )
