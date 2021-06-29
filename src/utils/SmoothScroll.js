@@ -7,15 +7,13 @@ export const SmoothScrollContext = createContext({
 export const SmoothScrollProvider = ({ children, options }) => {
   const [scroll, setScroll] = useState(null);
 
-   
-   useEffect(() => {
-     setTimeout(() => {
-       document.documentElement.classList.add('is-ready');
-     }, 300);
-   }, []);
-  
+  useEffect(() => {
+    setTimeout(() => {
+      document.documentElement.classList.add('is-ready');
+    }, 300);
+  }, []);
 
-    useEffect(() => {
+  useEffect(() => {
     if (!scroll) {
       (async () => {
         try {
@@ -33,18 +31,17 @@ export const SmoothScrollProvider = ({ children, options }) => {
                 smooth: true,
               },
               reloadOnContextChange: true,
-              ...options
+              ...options,
             })
-          );  
-
+          );
         } catch (error) {
           throw Error(`[SmoothScrollProvider]: ${error}`);
         }
       })();
     }
-     
+
     return () => {
-      scroll && scroll.destroy()
+      scroll && scroll.destroy();
     };
   }, [scroll]); // eslint-disable-line react-hooks/exhaustive-deps
 
