@@ -17,22 +17,22 @@ export function Information() {
     });
     tl.from(el.querySelector('.inforight_title .span_inner'), {
       yPercent: 100,
-      duration: 1,
+      duration: 0.7,
       delay: 0.8,
       ease: 'power3.easeOut',
-      // stagger: {
-      //   amount: 0.5,
-      // },
+      stagger: {
+        amount: 0.5,
+      },
     })
       .from(
         el.querySelector('.info_para .span_inner'),
         {
           yPercent: 100,
-          duration: 1,
+          duration: 0.8,
           ease: 'power3.easeOut',
-          // stagger: {
-          //   amount: 0.5,
-          // },
+          stagger: {
+            amount: 0.5,
+          },
         },
         '-=.7'
       )
