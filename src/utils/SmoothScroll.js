@@ -28,7 +28,7 @@ export const SmoothScrollProvider = ({ children, options }) => {
               getSpeed: true,
               getDirection: true,
               smartphone: {
-                smooth: true,
+                smooth: false,
               },
               reloadOnContextChange: true,
               ...options,
