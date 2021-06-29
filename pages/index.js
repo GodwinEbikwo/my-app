@@ -22,7 +22,7 @@ export default function Home() {
       {/* <Landing /> */}
       {/* <Shop/> */}
       <Information />
-      <InformationTwo />
+      {/* <InformationTwo /> */}
       <Cta />
       {/* <Product /> */}
     </SmoothScrollProvider>

@@ -50,7 +50,7 @@ export function Information() {
                   <img
                     loading="lazy"
                     className="b-speed-block_image img"
-                    src="/03.jpg"
+                    src="https://res.cloudinary.com/godwinebikwo/image/upload/v1621008026/tom-crew-XtyxEBiA8D8-unsplash_mjpah4.jpg"
                     alt="fivensix"
                   />
                 </div>
