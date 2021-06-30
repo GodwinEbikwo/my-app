@@ -7,7 +7,7 @@ export default function ApexThree() {
       <div data-scroll className="container large-ptb">
         <div className="w-grid">
           <aside className="w-left">
-            <h1>Enviromentally Cautious</h1>
+            <h1>Enviromentally cautious</h1>
 
             <div className="img-container">
               <div className="b-speed-block" data-scroll>
@@ -15,7 +15,7 @@ export default function ApexThree() {
                   <div className="b-image" data-scroll>
                     <Image
                       className="b-speed-block_image img"
-                      src="https://res.cloudinary.com/godwinebikwo/image/upload/v1625073745/ben-allan-BIeC4YK2MTA-unsplash_ttjd04.jpg"
+                      src="https://res.cloudinary.com/godwinebikwo/image/upload/v1625073949/ben-allan-BIeC4YK2MTA-unsplash_1_qyaflh.jpg"
                       width={640}
                       height={640}
                       alt="fivensix"
@@ -70,6 +70,18 @@ export default function ApexThree() {
                 </li>
               </ul>
             </div>
+
+            <div className="w-30-yrs flex ai-jc fd-c">
+              <div className="">
+                <h1>30</h1>
+                <span>
+                  Years of architecture
+                  <br />
+                  planning and design
+                </span>
+                <br />
+              </div>
+            </div>
           </aside>
         </div>
       </div>
@@ -80,6 +92,26 @@ export default function ApexThree() {
 const Container = styled.section`
   border-top: 1px solid var(--border-color);
   min-height: 100vh;
+
+  .w-30-yrs {
+    position: relative;
+    margin-top: 2em;
+
+    h1 {
+      font-size: 24vw;
+      line-height: 1;
+      font-family: 'Inter', 'Helvetica Neue', -apple-system;
+      font-weight: 500;
+      letter-spacing: -0.1em;
+      text-align: center;
+    }
+
+    span {
+      display: block;
+      line-height: 100%;
+      text-align: center;
+    }
+  }
 
   .w-grid {
     display: grid;
