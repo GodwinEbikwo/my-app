@@ -7,9 +7,7 @@ export default function Apex() {
         <div className="a_grid">
           <aside className="o-layout_item">
             <h1 className="a_heading">
-              <span>
-                ECOX
-              </span>
+              <span>ECOX</span>
             </h1>
           </aside>
 
@@ -36,8 +34,6 @@ export default function Apex() {
 
 const Container = styled.section`
   position: relative;
-
-  
 
   .a_grid {
     @media screen and (min-width: 769px) {

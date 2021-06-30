@@ -156,7 +156,7 @@ const MenuStyles = styled.section`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-family: 'Monument Extended';
+    font-family: 'Monument Extended', 'Inter', sans-serif;
 
     span {
       display: inline-block;

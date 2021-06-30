@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-family: 'Monument Extended';
+    font-family: 'Monument Extended', 'Inter', sans-serif;
 
     span {
       display: inline-block;
@@ -68,9 +68,9 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-family: 'Monument Extended';
+    font-family: 'Monument Extended', 'Inter', sans-serif;
 
-    .line {
+    span {
       display: inline-block;
       font-weight: 400;
       letter-spacing: var(--letter-spacing-small);

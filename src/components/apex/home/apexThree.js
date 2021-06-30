@@ -29,16 +29,16 @@ export default function ApexThree() {
           <aside className="w-right">
             <div className="max-w">
               <p>
-                With over 30 years in the game, we adapted our techniques
-                to be in line with modern standards that are not harmful to our
-                dear planet.
+                With over 25 years in the game, we adapted our techniques to be
+                in line with modern standards that are not harmful to our dear
+                planet.
               </p>
               <p>
-                We joined forces with planer-4-u to give 0.1% of our income to
+                We joined forces with planet-4-u to give 0.1% of our income to
                 sustainable projects to offset our emissions.
               </p>
             </div>
-{/* 
+
             <div className="o-layout_item">
               <ul className="c-summary-list">
                 <li className="c-summary_list_item u-label" data-scroll>
@@ -69,11 +69,11 @@ export default function ApexThree() {
                   </a>
                 </li>
               </ul>
-            </div> */}
+            </div>
 
             <div className="w-30-yrs flex ai-jc fd-c">
-              <div className="">
-                <h1>30</h1>
+              <div>
+                <h1>25</h1>
                 <span>
                   Years of architecture
                   <br />
@@ -104,12 +104,16 @@ const Container = styled.section`
       font-weight: 500;
       letter-spacing: -0.1em;
       text-align: center;
+      @media (max-width: 600px) {
+        font-size: 50vw;
+      }
     }
 
     span {
       display: block;
       line-height: 100%;
       text-align: center;
+      letter-spacing: var(--letter-spacing-medium);
     }
   }
 
