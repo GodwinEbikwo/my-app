@@ -258,3 +258,17 @@ p {
   padding-left: 0;
   padding-bottom: 0.5em;
 }
+
+.hide-for-mobile {
+  display: unset;
+  @media (max-width: 47.9375em) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  display: unset;
+  @media (min-width: 48em) {
+    display: none;
+  }
+}

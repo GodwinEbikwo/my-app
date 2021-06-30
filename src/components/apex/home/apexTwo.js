@@ -7,7 +7,7 @@ export default function ApexTwo() {
       <div data-scroll className="container large-ptb">
         <div className="w-grid">
           <aside className="w-left">
-            <h1>Our sevices include</h1>
+            <h1>Our services include</h1>
           </aside>
 
           <aside className="w-right">

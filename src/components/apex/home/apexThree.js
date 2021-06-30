@@ -38,7 +38,7 @@ export default function ApexThree() {
                 sustainable projects to offset our emissions.
               </p>
             </div>
-
+{/* 
             <div className="o-layout_item">
               <ul className="c-summary-list">
                 <li className="c-summary_list_item u-label" data-scroll>
@@ -69,7 +69,7 @@ export default function ApexThree() {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             <div className="w-30-yrs flex ai-jc fd-c">
               <div className="">
@@ -115,7 +115,7 @@ const Container = styled.section`
 
   .w-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2em;
   }
 

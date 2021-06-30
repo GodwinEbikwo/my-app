@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { useCart } from '../lib/cartState';
+import Link from 'next/link';
 
 export default function Menu() {
   const { cartOpen, closeCart } = useCart();
@@ -10,13 +11,42 @@ export default function Menu() {
     <>
       <MenuStyles open={cartOpen}>
         <div className="scroll-container">
-          <header className="flex sb">
-            <h2>Summary</h2>
-            <button type="button" onClick={closeCart}>
+          <header className="flex flex-end">
+            <button type="button" onClick={closeCart} className="button_label">
               <span>close</span>
             </button>
           </header>
         </div>
+
+        <ul className="c-summary-list">
+          <li className="c-summary_list_item u-label" data-scroll>
+            <a href="#speed-control" data-scroll-to>
+              01. Projects
+              <span className="c-summary_list_icon u-icon">↓</span>
+            </a>
+          </li>
+
+          <li className="c-summary_list_item u-label" data-scroll>
+            <a href="#speed-control" data-scroll-to>
+              02. About
+              <span className="c-summary_list_icon u-icon">↓</span>
+            </a>
+          </li>
+
+          <li className="c-summary_list_item u-label" data-scroll>
+            <a href="#speed-control" data-scroll-to>
+              03.Team
+              <span className="c-summary_list_icon u-icon">↓</span>
+            </a>
+          </li>
+
+          <li className="c-summary_list_item u-label" data-scroll>
+            <a href="#speed-control" data-scroll-to>
+              04. Journal
+              <span className="c-summary_list_icon u-icon">↓</span>
+            </a>
+          </li>
+        </ul>
       </MenuStyles>
       <Overlay open={cartOpen} />
     </>
@@ -25,9 +55,8 @@ export default function Menu() {
 
 const MenuStyles = styled.section`
   outline: none;
-  position: relative;
-  background-color: #161616;
   position: fixed;
+  background-color: var(--primary-accent);
   height: 100vh;
   top: 0;
   right: 0;
@@ -43,6 +72,7 @@ const MenuStyles = styled.section`
   ${(props) =>
     props.open &&
     `transform: translate3d(0, 0, 0); transition: transform 1s cubic-bezier(.76,0,.24,1);`};
+  cursor: pointer;
 
   @media (max-width: 766px) {
     min-width: 100%;
@@ -58,15 +88,83 @@ const MenuStyles = styled.section`
     padding: 1rem 1.35rem;
 
     h2 {
-      color: white;
       font-size: clamp(3rem, 4vw, 4rem);
       font-family: 'Roslindale', sans-serif;
     }
+  }
 
-    button {
-      span {
-        color: white;
+  .c-summary-list {
+    padding: var(--golden-ratio);
+  }
+
+  .c-summary_list_item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &:hover::after {
+      background-color: var(--primary-black);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background-color: var(--border-color);
+      transform: scaleX(0);
+    }
+
+    &.is-inview {
+      transform: none;
+      opacity: 1;
+
+      &::after {
+        transform: scaleX(1);
       }
+    }
+
+    a {
+      display: block;
+      padding: 8px 0;
+    }
+  }
+
+  .u-label {
+    text-transform: uppercase;
+    transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    &:hover {
+      color: var(--primary-black);
+    }
+  }
+
+  .c-summary_list_icon {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%) translateX(30px) rotate(-90deg);
+  }
+
+  .button_label {
+    width: 95px;
+    height: 40px;
+    background: var(--button-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Monument Extended';
+
+    span {
+      display: inline-block;
+      font-weight: 400;
+      letter-spacing: var(--letter-spacing-small);
+      font-size: 1.35em;
+      color: var(--primary-white);
+      text-transform: uppercase;
     }
   }
 `;

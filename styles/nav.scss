@@ -10,7 +10,7 @@
   #nav-logo {
     width: 95px;
     height: 40px;
-    background: #141414;
+    background: var(--button-black);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@
       display: inline-block;
       font-weight: 400;
       letter-spacing: var(--letter-spacing-small);
-      font-size: 1.5em;
+      font-size: 1.35em;
       color: var(--primary-white);
       text-transform: uppercase;
     }
@@ -60,7 +60,23 @@
     position: relative;
   }
 
-  // .line-w {
-  //   position: relative;
-  // }
+  .header_heading_label {
+    width: 95px;
+    height: 40px;
+    background: var(--button-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Monument Extended';
+
+    .line {
+      display: inline-block;
+      font-weight: 400;
+      letter-spacing: var(--letter-spacing-small);
+      font-size: 1.35em;
+      color: var(--primary-white);
+      text-transform: uppercase;
+    }
+  }
 }
