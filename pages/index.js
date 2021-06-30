@@ -12,8 +12,8 @@ import Shop from '../src/components/shop';
 import Main from '../src/components/main';
 import Nav from '../src/components/nav';
 import Header from '../src/components/header';
-import Apex from '../src/components/apex/home/index'
-
+import Apex from '../src/components/apex/home/index';
+import ApexTwo from '../src/components/apex/home/apexTwo';
 
 export default function Home() {
   return (
@@ -23,9 +23,9 @@ export default function Home() {
         <meta name="description" content={description} />
       </Head>
 
-    
       <Nav />
-    <Apex/>
+      <Apex />
+      <ApexTwo />
       {/* <Main /> */}
       {/* <One /> */}
       {/* <Landing /> */}

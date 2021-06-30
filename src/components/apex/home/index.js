@@ -1,7 +1,4 @@
-import { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
 import styled from 'styled-components';
-import Image from 'next/image';
 
 export default function Apex() {
   return (
@@ -39,14 +36,14 @@ const Container = styled.section`
   position: relative;
 
   .a_grid {
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 769px) {
       display: grid;
       grid-template-columns: 3fr 1fr;
     }
   }
 
   .flex {
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 768px) {
       display: flex;
       justify-content: space-between;
       flex-direction: initial;
@@ -57,8 +54,7 @@ const Container = styled.section`
   .a_label {
     margin-bottom: 2em;
     letter-spacing: var(--letter-spacing-medium);
-
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 768px) {
       display: flex;
       margin-bottom: 0;
       & > span {
@@ -72,8 +68,8 @@ const Container = styled.section`
 
   .a_para {
     padding-bottom: 2.9em;
-    @media screen and (max-width: 699px) {
-      padding: 0 1.35rem;
+    @media screen and (max-width: 768px) {
+      padding: 0 1rem;
     }
   }
 
@@ -87,7 +83,7 @@ const Container = styled.section`
     font-size: 45px;
     letter-spacing: var(--letter-spacing-large);
     line-height: 1.2;
-    @media screen and (max-width: 699px) {
+    @media screen and (max-width: 768px) {
       font-size: 20px;
     }
   }
@@ -98,9 +94,9 @@ const Container = styled.section`
     font-weight: 500;
     line-height: 1;
     letter-spacing: var(--letter-spacing-large);
-    @media screen and (max-width: 699px) {
-      font-size: 36vw;
-      text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 34vw;
+      text-align: start;
     }
   }
 `;

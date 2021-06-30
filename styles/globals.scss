@@ -29,7 +29,7 @@
 }
 
 :root {
-  --golden-ratio: 1.5rem;
+  --golden-ratio: 2.2rem;
   --max-width: 140rem;
 
   --primary-accent: #f3f2ec;
@@ -39,7 +39,7 @@
   --secondary-black: #333;
   --primary-white: #f8f8f8;
 
-  --text-color: #161616;
+  --text-color: #272727;
   --warning: #e23737;
 
   --primary-font: 'Roslindale';
@@ -254,6 +254,7 @@ p {
 .o-layout_item {
   display: inline-block;
   width: 100%;
-  vertical-align: top;
+  vertical-align: middle;
   padding-left: 0;
+  padding-bottom: 0.5em;
 }
