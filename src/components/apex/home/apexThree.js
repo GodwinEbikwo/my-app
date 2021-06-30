@@ -29,13 +29,13 @@ export default function ApexThree() {
           <aside className="w-right">
             <div className="max-w">
               <p>
-                Our projects are designed for people, so they can live and
-                learn, work and play in a healthy safe and comfortable
-                surrounding.
+                With over 30 years in the game, we adapted our techniques
+                to be in line with modern standards that are not harmful to our
+                dear planet.
               </p>
               <p>
-                We serve clients by applying our expertises across numerous
-                discipline to create a well functional space.
+                We joined forces with planer-4-u to give 0.1% of our income to
+                sustainable projects to offset our emissions.
               </p>
             </div>
 
