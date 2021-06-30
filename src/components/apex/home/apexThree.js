@@ -1,13 +1,29 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
-export default function ApexTwo() {
+export default function ApexThree() {
   return (
     <Container data-scroll-section>
       <div data-scroll className="container large-ptb">
         <div className="w-grid">
           <aside className="w-left">
-            <h1>Our sevices include</h1>
+            <h1>Enviromentally Cautious</h1>
+
+            <div className="img-container">
+              <div className="b-speed-block" data-scroll>
+                <div className="b-image_wrapper" data-scroll data-scroll-repeat>
+                  <div className="b-image" data-scroll>
+                    <Image
+                      className="b-speed-block_image img"
+                      src="https://res.cloudinary.com/godwinebikwo/image/upload/v1625073745/ben-allan-BIeC4YK2MTA-unsplash_ttjd04.jpg"
+                      width={640}
+                      height={640}
+                      alt="fivensix"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </aside>
 
           <aside className="w-right">
@@ -54,22 +70,6 @@ export default function ApexTwo() {
                 </li>
               </ul>
             </div>
- 
-            <div className="img-container">
-              <div className="b-speed-block" data-scroll>
-                <div className="b-image_wrapper" data-scroll data-scroll-repeat>
-                  <div className="b-image" data-scroll>
-                    <Image
-                      className="b-speed-block_image img"
-                      src="https://res.cloudinary.com/godwinebikwo/image/upload/v1625068376/bryan-liaw-EVjh4OWwdw8-unsplash_pqh5uq.jpg"
-                      width={640}
-                      height={631}
-                      alt="fivensix"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div> 
           </aside>
         </div>
       </div>

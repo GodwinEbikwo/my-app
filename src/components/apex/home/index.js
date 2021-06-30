@@ -7,7 +7,9 @@ export default function Apex() {
         <div className="a_grid">
           <aside className="o-layout_item">
             <h1 className="a_heading">
-              <span>COEX</span>
+              <span>
+                ECOX
+              </span>
             </h1>
           </aside>
 
@@ -34,6 +36,8 @@ export default function Apex() {
 
 const Container = styled.section`
   position: relative;
+
+  
 
   .a_grid {
     @media screen and (min-width: 769px) {
@@ -67,7 +71,7 @@ const Container = styled.section`
   }
 
   .a_para {
-    padding-bottom: 2.9em;
+    padding-bottom: 3.5em;
     @media screen and (max-width: 768px) {
       padding: 0 1rem;
     }
@@ -89,13 +93,13 @@ const Container = styled.section`
   }
 
   .a_heading {
-    font-size: 28vw;
+    font-size: 25vw;
     font-family: 'Inter', 'Helvetica Neue', -apple-system;
     font-weight: 500;
     line-height: 1;
     letter-spacing: var(--letter-spacing-large);
     @media screen and (max-width: 768px) {
-      font-size: 34vw;
+      font-size: 32vw;
       text-align: start;
     }
   }

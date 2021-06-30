@@ -20,7 +20,6 @@ export default function One() {
               </svg>
             </div>
 
-          
             <h1 className="one_title" data-scroll>
               <span className="one_title_line">
                 <span>A small crochet</span>

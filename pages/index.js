@@ -14,6 +14,7 @@ import Nav from '../src/components/nav';
 import Header from '../src/components/header';
 import Apex from '../src/components/apex/home/index';
 import ApexTwo from '../src/components/apex/home/apexTwo';
+import ApexThree from '../src/components/apex/home/apexThree';
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Nav />
       <Apex />
       <ApexTwo />
+      <ApexThree/>
       {/* <Main /> */}
       {/* <One /> */}
       {/* <Landing /> */}
