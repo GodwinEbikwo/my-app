@@ -91,3 +91,11 @@ $from-gigantic: 2000px !default;
 $to-gigantic: $from-gigantic - 1 !default;
 $from-colossal: 2400px !default;
 $to-colossal: $from-colossal - 1 !default;
+
+// Colors
+$bg-color: hsl(51, 23%, 94%);
+$dot-color: hsl(0, 0%, 53%);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 22px;

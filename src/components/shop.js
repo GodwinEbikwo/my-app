@@ -34,11 +34,21 @@ export default function Shop() {
 
             <ProductCollectionItem className="product-collection-item">
               <ProductCollectionCover className="p-c-c picture">
-                <img
-                  alt="candles"
-                  src="https://res.cloudinary.com/godwinebikwo/image/upload/v1620917535/tom-crew-iUFS1GCpEbk-unsplash_atfu0n.jpg"
-                  loading="lazy"
-                />
+                <div className="b-speed-block" data-scroll>
+                  <div
+                    className="b-image_wrapper"
+                    data-scroll
+                    data-scroll-repeat>
+                    <div className="b-image" data-scroll>
+                      <img
+                        className="b-speed-block_image img"
+                        alt="candles"
+                        src="https://res.cloudinary.com/godwinebikwo/image/upload/v1620917535/tom-crew-iUFS1GCpEbk-unsplash_atfu0n.jpg"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
               </ProductCollectionCover>
               <ProductCollectionCard className="left">
                 <div className="product__collection__card__title">
@@ -62,7 +72,6 @@ export default function Shop() {
     </ProductCollection>
   );
 }
-
 
 const ProductCollection = styled.section`
   position: relative;

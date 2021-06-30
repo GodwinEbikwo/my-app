@@ -1,0 +1,61 @@
+#nav {
+  display: flex;
+  justify-content: space-between;
+
+  #nav-logo {
+    width: 95px;
+    height: 40px;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Monument Extended';
+
+    span {
+      display: inline-block;
+      font-weight: 400;
+      letter-spacing: var(--letter-spacing-small);
+      font-size: 1.5em;
+      color: var(--primary-white);
+      text-transform: uppercase;
+    }
+  }
+
+  #nav-list {
+    width: 301px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: $from-medium) {
+      margin-top: 2em;
+    }
+  }
+
+  .line-w > span {
+    overflow: hidden;
+  }
+
+  .line-w {
+    span {
+      display: block;
+      letter-spacing: var(--letter-spacing-medium);
+    }
+  }
+
+  .line-w > span:last-child {
+    padding-bottom: 5px;
+  }
+
+  .nav-li-no {
+    line-height: 16px;
+    font-size: 10px;
+  }
+
+  .nav-li-name {
+    position: relative;
+  }
+
+  // .line-w {
+  //   position: relative;
+  // }
+}

@@ -2,6 +2,7 @@ import styles from './layout.module.scss';
 import Head from 'next/head';
 import Header from './header';
 import Footer from './footer';
+import Nav from './nav';
 export const siteTitle = 'Bluu Lime';
 export const url = 'https://plannify.vercel.app/';
 export const description = 'Bluu lime knitted hand bags';
@@ -16,6 +17,7 @@ export default function Layout({ children, description }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{siteTitle}</title>
       </Head>
+     
       {/* <Header /> */}
       <div className={styles.layout_main}>
         {children}

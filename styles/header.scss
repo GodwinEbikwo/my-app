@@ -1,9 +1,7 @@
 .header {
   // background: rgb(147, 176, 187);
-  background-color: #161616;
+  // background-color: #161616;
   // background-color: #93b0bb;
-
-  color: rgba(255, 255, 255, 0.9);
 
   .header_title {
     letter-spacing: -0.03em;
@@ -19,48 +17,47 @@
       display: inline-block;
       padding: 0 1rem;
       letter-spacing: -0.06em;
-      color: rgba(255, 255, 255, 0.9);
     }
   }
 
-  .header_heading_label {
-    display: block;
-    transition: transform 0s $easing;
-    transform: translateY(-60px);
+  // .header_heading_label {
+  //   display: block;
+  //   transition: transform 0s $easing;
+  //   transform: translateY(-60px);
 
-    html.is-ready & {
-      transform: none;
-      transition-duration: 0.8s;
-    }
+  //   html.is-ready & {
+  //     transform: none;
+  //     transition-duration: 0.8s;
+  //   }
 
-    html.is-ready .o-layout_item:nth-child(2) & {
-      transition-delay: 0.1s;
-    }
-  }
+  //   html.is-ready .o-layout_item:nth-child(2) & {
+  //     transition-delay: 0.1s;
+  //   }
+  // }
 
-  .h-seperator {
-    display: block;
+  // .h-seperator {
+  //   display: block;
 
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0.5vw;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background-color: #111;
-      transform: scaleX(0);
-      transition: transform 1s $easing;
+  //   &::before {
+  //     content: '';
+  //     position: absolute;
+  //     bottom: 0.5vw;
+  //     left: 0;
+  //     right: 0;
+  //     height: 1px;
+  //     background-color: #111;
+  //     transform: scaleX(0);
+  //     transition: transform 1s $easing;
 
-      html.is-ready & {
-        transform: scaleX(1);
-      }
-      @media (max-width: $to-small) {
-        margin: 0 1.25rem;
-      }
-      @media (min-width: $from-medium) {
-        margin: 0 3.25rem;
-      }
-    }
-  }
+  //     html.is-ready & {
+  //       transform: scaleX(1);
+  //     }
+  //     @media (max-width: $to-small) {
+  //       margin: 0 1.25rem;
+  //     }
+  //     @media (min-width: $from-medium) {
+  //       margin: 0 3.25rem;
+  //     }
+  //   }
+  // }
 }

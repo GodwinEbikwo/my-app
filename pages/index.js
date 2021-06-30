@@ -9,6 +9,11 @@ import { Information, InformationTwo } from '../src/components/information';
 import Cta from '../src/components/cta';
 import Footer from '../src/components/footer';
 import Shop from '../src/components/shop';
+import Main from '../src/components/main';
+import Nav from '../src/components/nav';
+import Header from '../src/components/header';
+import Apex from '../src/components/apex/home/index'
+
 
 export default function Home() {
   return (
@@ -18,12 +23,16 @@ export default function Home() {
         <meta name="description" content={description} />
       </Head>
 
+    
+      <Nav />
+    <Apex/>
+      {/* <Main /> */}
       {/* <One /> */}
       {/* <Landing /> */}
-      {/* <Shop/> */}
-      <Information />
+      {/* <Shop /> */}
+      {/* <Information /> */}
       {/* <InformationTwo /> */}
-      <Cta />
+      {/* <Cta /> */}
       {/* <Product /> */}
     </SmoothScrollProvider>
   );
