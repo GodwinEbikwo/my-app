@@ -13,9 +13,9 @@ export default function ApexSix() {
                   <sup>K</sup>
                 </h1>
                 <span>
-                  Years of architecture
+                 with over 1,500
                   <br />
-                  planning and design
+                 projects completed
                 </span>
                 <br />
               </div>
@@ -103,7 +103,11 @@ const Container = styled.section`
       display: block;
       line-height: 100%;
       text-align: center;
-      letter-spacing: var(--letter-spacing-medium);
+      letter-spacing: var(--letter-spacing-large);
+      font-size: 5vw;
+      @media (min-width: 600px) {
+        font-size: 3vw;
+      }
     }
   }
 `;

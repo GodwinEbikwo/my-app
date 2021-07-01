@@ -95,7 +95,6 @@ const Container = styled.section`
 
   .w-30-yrs {
     position: relative;
-    margin-top: 2em;
 
     h1 {
       font-size: 24vw;
@@ -113,7 +112,11 @@ const Container = styled.section`
       display: block;
       line-height: 100%;
       text-align: center;
-      letter-spacing: var(--letter-spacing-medium);
+      letter-spacing: var(--letter-spacing-large);
+      font-size: 5vw;
+      @media (min-width: 600px) {
+        font-size: 3vw;
+      }
     }
   }
 
