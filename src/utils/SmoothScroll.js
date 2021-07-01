@@ -14,6 +14,17 @@ export const SmoothScrollProvider = ({ children, options }) => {
   }, []);
 
   useEffect(() => {
+    const clouds = document.querySelector('.clouds');
+    (instance) => {
+        if (instance.scroll.y > 100) {
+          clouds.style.transform = 'rotate(90deg)';
+        } else {
+          clouds.style.transform = 'rotate(0deg)';
+        }
+      };
+  }, []);
+
+  useEffect(() => {
     if (!scroll) {
       (async () => {
         try {

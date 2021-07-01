@@ -50,10 +50,9 @@ export default function One() {
     ).from(
       el.querySelector('.smiley'),
       {
-        opacity: 0,
+        y: -50,
         ease: 'power4',
       },
-      '<0.2'
     );
   }, []);
 
@@ -168,8 +167,8 @@ export default function One() {
               </p>
             </div>
 
-            <div className="o-middle">
-              <div className="flex ai-jc icon" data-scroll>
+            <div className="o-middle clouds" data-scroll>
+              <div className="flex ai-jc icon">
                 <p>↓</p>
               </div>
             </div>

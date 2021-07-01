@@ -8,14 +8,14 @@
     min-height: 100vh;
   }
 
-  .one_title {
-    font-weight: 400;
-    font-size: clamp(3rem, 13vw, 13rem);
-    text-align: center;
-    font-family: 'Roslindale', sans-serif;
-    color: #fff;
-    margin-bottom: 4rem;
-  }
+  // .one_title {
+  //   font-weight: 400;
+  //   font-size: clamp(3rem, 13vw, 13rem);
+  //   text-align: center;
+  //   font-family: 'Inter', sans-serif;
+  //   color: #fff;
+  //   margin-bottom: 4rem;
+  // }
 
   .one_title_line {
     display: block;
@@ -42,22 +42,16 @@
       font-size: 12vw;
       opacity: 0;
       transition: opacity 0s $easing, transform 2s $easing;
-      transition-delay: 1.2s;
       transform: rotate(-180deg);
-
-      &.is-inview {
-        opacity: 1;
-        transform: rotate(0deg);
-      }
+      will-change: transform;
     }
 
-    .arrow {
-      transform: rotate(90deg);
-      width: 30px;
-      object-fit: fill;
-      vertical-align: middle;
-      display: inline-block;
-      max-width: none;
+    &.is-inview {
+      .icon {
+        opacity: 1;
+        transform: rotate(0deg);
+        transition-delay: 0.8s;
+      }
     }
   }
 
@@ -111,26 +105,11 @@
     }
   }
 
-  .h-header_line {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0;
-    transform: scaleX(0);
-    transition: transform 1.2s ease;
-
-    html.is-ready & {
-      transform: scaleX(1.5);
-      transition-delay: 0.6s;
-    }
-  }
-
   .content-para {
     font-weight: 500;
     letter-spacing: -0.03em;
     text-align: center;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.1;
     & > div {
       position: relative;
@@ -139,14 +118,20 @@
   }
 
   h1 {
-    line-height: 100%;
+    line-height: 95%;
     text-transform: uppercase;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.9);
     margin: 0;
     position: relative;
     overflow: hidden;
     text-align: center;
-    font-size: clamp(3rem, 9vw, 9rem);
+    font-size: 3rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.08em;
+    font-weight: 600;
+    @media screen and (min-width: 768px) {
+      font-size: clamp(2rem, 9vw, 9rem);
+    }
   }
 
   h1 > div {
