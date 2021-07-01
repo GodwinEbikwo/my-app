@@ -73,7 +73,6 @@ export default function ApexFive() {
 
 const Container = styled.section`
   border-top: 1px solid var(--border-color);
-  min-height: 100vh;
 
   .w-grid {
     @media (min-width: 768px) {

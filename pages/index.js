@@ -17,6 +17,7 @@ import ApexTwo from '../src/components/apex/home/apexTwo';
 import ApexThree from '../src/components/apex/home/apexThree';
 import ApexFour from '../src/components/apex/home/apexFour';
 import ApexFive from '../src/components/apex/home/apexFive';
+import ApexSix from '../src/components/apex/home/apexSix';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <ApexThree />
       <ApexFour />
       <ApexFive />
+      <ApexSix />
       {/* <Main /> */}
       {/* <One /> */}
       {/* <Landing /> */}
