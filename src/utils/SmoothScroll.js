@@ -25,8 +25,8 @@ export const SmoothScrollProvider = ({ children, options }) => {
                 '[data-scroll-container]' ??
                 undefined,
               smooth: true,
-              getSpeed: true,
-              getDirection: true,
+              multiplier: 1,
+              class: 'is-inview',
               smartphone: {
                 smooth: false,
               },

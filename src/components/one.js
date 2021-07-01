@@ -1,5 +1,32 @@
+import { useEffect } from 'react';
 import Image from 'next/image';
+import { gsap } from 'gsap';
+import SplitText from '../utils/Split3.min';
+
+
+
 export default function One() {
+
+  useEffect(() => {
+    const split = new SplitText('h1', {
+      type: 'lines',
+      linesClass: 'split-child',
+    });
+
+    const splitParent = new SplitText('h1', {
+      // type: 'lines',
+      linesClass: 'split-parent',
+    });
+
+    gsap.from(split.lines, {
+      duration: 1.2,
+      yPercent: 100,
+      ease: 'power4',
+      stagger: 0.2,
+    });
+  }, []);
+
+
   return (
     <section className="one" data-scroll-section>
       <div className="container large-ptb">
@@ -20,15 +47,12 @@ export default function One() {
               </svg>
             </div>
 
-            <h1 className="one_title" data-scroll>
-              <span className="one_title_line">
-                <span>A small crochet</span>
-              </span>
-
-              <span className="one_title_line">
-                <span>studio...</span>
-              </span>
-            </h1>
+            <div className="text-heading">
+              <h1>
+                A small crochet <br /> studio based in <br /> northampton
+                england.
+              </h1>
+            </div>
 
             <div className="o-middle" data-scroll>
               <p>

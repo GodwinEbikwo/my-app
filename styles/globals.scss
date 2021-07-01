@@ -207,7 +207,8 @@ html.has-scroll-dragging {
 
 body {
   min-height: 100vh;
-  font-feature-settings: 'kern';
+  font-kerning: none;
+  transform: translateZ(0);
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

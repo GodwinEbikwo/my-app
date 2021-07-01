@@ -79,7 +79,6 @@ export default function ApexTwo() {
 
 const Container = styled.section`
   border-top: 1px solid var(--border-color);
-  min-height: 100vh;
 
   .w-grid {
     display: grid;

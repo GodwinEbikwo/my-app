@@ -91,7 +91,6 @@ export default function ApexThree() {
 
 const Container = styled.section`
   border-top: 1px solid var(--border-color);
-  min-height: 100vh;
 
   .w-30-yrs {
     position: relative;

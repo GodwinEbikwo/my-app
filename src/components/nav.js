@@ -16,7 +16,7 @@ export default function Nav() {
         <div className="hide-for-mobile">
           <ul id="nav-list">
             <li>
-              <Link href="/">
+              <Link href="/projects">
                 <a className="link link--metis">
                   <span>
                     <span className="nav-li-no">1</span>
