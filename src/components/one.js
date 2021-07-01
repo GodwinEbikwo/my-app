@@ -1,34 +1,64 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import SplitText from '../utils/Split3.min';
 
-
-
 export default function One() {
+  const ref = useRef(null);
+
+  // useEffect(() => {
+  //   const split = new SplitText('h1', {
+  //     type: 'lines',
+  //     linesClass: 'split-child',
+  //   });
+
+  //   const splitParent = new SplitText('h1', {
+  //     // type: 'lines',
+  //     linesClass: 'split-parent',
+  //   });
+
+  //   gsap.from(split.lines, {
+  //     duration: 1.2,
+  //     yPercent: 100,
+  //     ease: 'power4',
+  //     stagger: 0.2,
+  //   });
+  // }, []);
 
   useEffect(() => {
-    const split = new SplitText('h1', {
+    const el = ref.current;
+    const tl = gsap.timeline({});
+    const split = new SplitText('h1, .content-para', {
       type: 'lines',
       linesClass: 'split-child',
     });
 
-    const splitParent = new SplitText('h1', {
+    const splitParent = new SplitText('h1, .content-para', {
       // type: 'lines',
       linesClass: 'split-parent',
     });
 
-    gsap.from(split.lines, {
-      duration: 1.2,
-      yPercent: 100,
-      ease: 'power4',
-      stagger: 0.2,
-    });
+    tl.from(
+      split.lines,
+      {
+        duration: 1.2,
+        yPercent: 100,
+        ease: 'power4',
+        stagger: 0.2,
+      },
+      '<0.2'
+    ).from(
+      el.querySelector('.smiley'),
+      {
+        opacity: 0,
+        ease: 'power4',
+      },
+      '<0.2'
+    );
   }, []);
 
-
   return (
-    <section className="one" data-scroll-section>
+    <section className="one" data-scroll-section ref={ref}>
       <div className="container large-ptb">
         <div className="flex ai-jc fd-c">
           <div className="o-summary">
@@ -54,7 +84,15 @@ export default function One() {
               </h1>
             </div>
 
-            <div className="o-middle" data-scroll>
+            <div>
+              <p className="content-para">
+                ...BASED UNDER THE COLD IN BARNSLEY <br />
+                UNITED KINGDOM, THE CITY OF FARMERS AND THE <br /> MORE FAMOUS
+                JOHN BARNES
+              </p>
+            </div>
+
+            {/* <div className="o-middle" data-scroll>
               <p>
                 <span>...BASED UNDER THE COLD IN BARNSLEY,</span> <br />
                 <span> UNITED KINGDOM, THE CITY OF FARMERS AND THE</span> <br />
@@ -66,7 +104,7 @@ export default function One() {
                 <span>MONTHS AFTER, WE GOT THE</span> <br />
                 <span>VACCINE</span>
               </p>
-            </div>
+            </div> */}
 
             <div className="gif">
               <svg
@@ -95,7 +133,22 @@ export default function One() {
               </svg>
             </div>
 
-            <div className="o-middle" data-scroll>
+            <div>
+              <p className="content-para">
+                WE BUILD KNITTED BAGS, AND HANDGLOVES,
+                <br />
+                WE TAKE CUSTOM ORDERS IN ADVANCE <br /> AND ARE LOOKING TO ADD
+                MORE INVENTORY
+              </p>
+
+              <p className="content-para">
+                EVERYPIECE WE CRAFT IS HANDMADE
+                <br />
+                WITH LOVE AND ATTENTION <br />
+              </p>
+            </div>
+
+            {/* <div className="o-middle" data-scroll>
               <p>
                 <span>WE BUILD KNITTED BAGS, AND HANDGLOVES,</span> <br />
                 <span>WE TAKE CUSTOM ORDERS IN ADVANCE</span> <br />
@@ -106,17 +159,17 @@ export default function One() {
                 <span>EVERYPIECE WE CRAFT IS HANDMADE</span> <br />
                 <span>WITH LOVE AND ATTENTION</span> <br />
               </p>
-            </div>
+            </div> */}
 
-            <div className="o-middle" data-scroll>
-              <p>
-                <span>IN A NUT SHELL</span> <br />
-                <span>THIS IS WHAT WE DO</span> <br />
+            <div>
+              <p className="content-para">
+                IN A NUT SHELL <br />
+                THIS IS WHAT WE DO
               </p>
             </div>
 
-            <div className="o-middle" data-scroll>
-              <div className="flex ai-jc icon">
+            <div className="o-middle">
+              <div className="flex ai-jc icon" data-scroll>
                 <p>↓</p>
               </div>
             </div>
