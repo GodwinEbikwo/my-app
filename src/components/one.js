@@ -15,7 +15,7 @@ export default function One() {
   }, [onScreen]);
 
   useEffect(() => {
-    const tl = gsap.timeline({delay: 0.3});
+    const tl = gsap.timeline({delay: 0.2});
 
     if (reveal) {
       const split = new SplitText('h1, .content-para', {

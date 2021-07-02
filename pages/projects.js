@@ -14,6 +14,7 @@ export default function Home() {
       </Head>
       <One />
       <Cta />
+      <Information />
     </SmoothScrollProvider>
   );
 }

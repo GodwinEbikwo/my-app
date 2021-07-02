@@ -1,50 +1,43 @@
 /* eslint-disable @next/next/no-img-element */
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import useOnScreen from '../lib/useOnScreen';
+import SplitText from '../utils/Split3.min';
 
 export function Information() {
   const ref = useRef(null);
+  const [reveal, setReveal] = useState(false);
+  const onScreen = useOnScreen(ref);
 
   useEffect(() => {
-    const el = ref.current;
-    const tl = gsap.timeline({
-      defaults: {
-        duration: 1,
-        ease: 'none',
-      },
-      smoothChildTiming: true,
-      autoRemoveChildren: true,
-    });
-    tl.from(el.querySelector('.inforight_title .span_inner'), {
-      yPercent: 100,
-      duration: 0.7,
-      delay: 0.8,
-      ease: 'power3.easeOut',
-      stagger: {
-        amount: 0.5,
-      },
-    })
-      .from(
-        el.querySelector('.info_para .span_inner'),
+    if (onScreen) setReveal(onScreen);
+  }, [onScreen]);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ delay: 0.2 });
+    if (reveal) {
+      const split = new SplitText('.inforight_title, .info_para ', {
+        type: 'lines',
+        linesClass: 'split-child',
+      });
+
+      const splitParent = new SplitText('.inforight_title, .info_para', {
+        linesClass: 'split-parent',
+      });
+
+      tl.from(
+        split.lines,
         {
+          duration: 1.2,
           yPercent: 100,
-          duration: 0.8,
-          ease: 'power3.easeOut',
-          stagger: {
-            amount: 0.5,
-          },
+          ease: 'power4',
+          stagger: 0.2,
         },
-        '-=.7'
-      )
-      .from(
-        el.querySelector('.main-button'),
-        {
-          opacity: 0,
-          ease: 'none',
-        },
-        '-=.8'
+        '<0.4'
       );
-  }, []);
+    }
+  }, [reveal]);
+
 
   return (
     <section className="information" data-scroll-section ref={ref}>

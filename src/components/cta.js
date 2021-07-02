@@ -1,12 +1,13 @@
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import SplitText from '../utils/Split3.min';
 import cn from 'classnames';
 import useOnScreen from '../lib/useOnScreen';
 
-export default function Cta() {
+function Cta() {
+
   const ref = useRef(null);
   const [reveal, setReveal] = useState(false);
   const onScreen = useOnScreen(ref);
@@ -16,7 +17,7 @@ export default function Cta() {
   }, [onScreen]);
 
   useEffect(() => {
-    const tl = gsap.timeline({delay: 0.3});
+    const tl = gsap.timeline({delay: 0.2});
     if (reveal) {
       const split = new SplitText('.cta__p', {
         type: 'lines',
@@ -42,7 +43,7 @@ export default function Cta() {
 
   return (
     <CtaContainer data-scroll-section ref={ref}>
-      <CtaInner>
+      <CtaInner className="inner">
         <div className="gif">
           <svg
             width="73"
@@ -66,7 +67,10 @@ export default function Cta() {
         </p> */}
 
         <div>
-          <p className={cn('cta__p', { 'is-inview': reveal })} data-scroll>
+          <p
+           
+            className={cn('cta__p', { 'is-inview': reveal })}
+            data-scroll>
             Never have to worry about the safety OR <br />
             QUALITY of the products that <br />
             you choose to put in your home.
@@ -91,6 +95,7 @@ export default function Cta() {
 
         <div className="title_container">
           <p
+           
             className={cn('cta__p', { 'is-inview': reveal })}
             data-scroll-offset="0, 100">
             At fivensix, we focus on things <br />
@@ -107,6 +112,8 @@ export default function Cta() {
     </CtaContainer>
   );
 }
+
+export default Cta;
 
 const CtaContainer = styled.section`
   display: flex;
@@ -168,10 +175,6 @@ const CtaInner = styled.div`
   }
 
   .cta__p {
-    /* @media screen and (min-width: 700px) {
-      max-width: 42.55222rem;
-    }
-    max-width: 30.55222rem; */
     line-height: 1.2;
     text-align: center;
     font-weight: 500;
@@ -190,26 +193,5 @@ const CtaInner = styled.div`
 
   .title_container {
     margin-bottom: var(--spacing-large);
-
-    .cta__title {
-      text-align: center;
-      line-height: 100%;
-      opacity: 0;
-      transition: opacity 0.3s $easing;
-      font-family: 'Inter', sans-serif;
-      letter-spacing: -0.05em;
-      position: relative;
-      overflow: hidden;
-      /* font-size: 3rem; */
-
-      & > div {
-        position: relative;
-      }
-
-      &.is-inview {
-        opacity: 1;
-        transition-delay: 0.4s;
-      }
-    }
   }
 `;
