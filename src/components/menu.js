@@ -3,13 +3,14 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { useCart } from '../lib/cartState';
 import Link from 'next/link';
+import cn from 'classnames';
 
 export default function Menu() {
   const { cartOpen, closeCart } = useCart();
 
   return (
     <>
-      <MenuStyles open={cartOpen}>
+      <section className={cn('menu', { 'open': cartOpen })}>
         <div className="scroll-container">
           <header className="flex flex-end">
             <button type="button" onClick={closeCart} className="button_label">
@@ -47,7 +48,7 @@ export default function Menu() {
             </a>
           </li>
         </ul>
-      </MenuStyles>
+      </section>
       <Overlay open={cartOpen} />
     </>
   );

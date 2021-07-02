@@ -15,7 +15,7 @@ export default function One() {
   }, [onScreen]);
 
   useEffect(() => {
-    const tl = gsap.timeline({delay: 0.2});
+    const tl = gsap.timeline({ delay: 0.2 });
 
     if (reveal) {
       const split = new SplitText('h1, .content-para', {
@@ -124,26 +124,6 @@ export default function One() {
               </p>
             </div>
 
-            <div>
-              <p
-                className={cn('content-para', { 'is-reveal': reveal })}
-                data-scroll>
-                ...BASED UNDER THE COLD IN BARNSLEY <br />
-                UNITED KINGDOM, THE CITY OF FARMERS AND THE <br /> MORE FAMOUS
-                JOHN BARNES
-              </p>
-            </div>
-
-            <div>
-              <p
-                className={cn('content-para', { 'is-inview': reveal })}
-                data-scroll>
-                ...BASED UNDER THE COLD IN BARNSLEY <br />
-                UNITED KINGDOM, THE CITY OF FARMERS AND THE <br /> MORE FAMOUS
-                JOHN BARNES
-              </p>
-            </div>
-
             <div className="img-container">
               <div className="b-speed-block" data-scroll>
                 <div className="b-image_wrapper" data-scroll data-scroll-repeat>
@@ -160,7 +140,7 @@ export default function One() {
               </div>
             </div>
 
-            <div className="o-middle clouds" data-scroll>
+            <div className="o-middle clouds" data-scroll data-scroll-repeat>
               <div className="flex ai-jc icon">
                 <p>↓</p>
               </div>
