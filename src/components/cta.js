@@ -16,7 +16,7 @@ export default function Cta() {
   }, [onScreen]);
 
   useEffect(() => {
-    const tl = gsap.timeline({});
+    const tl = gsap.timeline({delay: 0.3});
     if (reveal) {
       const split = new SplitText('.cta__p, .cta__title', {
         type: 'lines',
@@ -90,14 +90,14 @@ export default function Cta() {
         </div>
 
         <div className="title_container">
-          <h1
+          <p
             className={cn('cta__title', { 'is-inview': reveal })}
-            data-scroll-offset="0, 900">
+            data-scroll-offset="0, 100">
             At fivensix, we focus on things <br />
-            that are really important to us <br />
+            that are really important to us
             <br />
             your body and your scent
-          </h1>
+          </p>
         </div>
 
         <button type="button" className="main-button">
@@ -114,8 +114,6 @@ const CtaContainer = styled.section`
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  
-  
 `;
 
 const CtaInner = styled.div`
@@ -197,16 +195,17 @@ const CtaInner = styled.div`
       text-align: center;
       line-height: 100%;
       opacity: 0;
-      transition: opacity 1s $easing;
+      transition: opacity 0.3s $easing;
       font-family: 'Inter', sans-serif;
       letter-spacing: -0.05em;
       position: relative;
       overflow: hidden;
-      font-weight: 500;
+      font-size: 3rem;
 
       & > div {
         position: relative;
       }
+
       &.is-inview {
         opacity: 1;
         transition-delay: 0.4s;
@@ -214,4 +213,3 @@ const CtaInner = styled.div`
     }
   }
 `;
-
