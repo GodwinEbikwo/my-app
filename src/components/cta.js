@@ -1,9 +1,47 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
+import SplitText from '../utils/Split3.min';
+import cn from 'classnames';
+import useOnScreen from '../lib/useOnScreen';
 
 export default function Cta() {
+  const ref = useRef(null);
+  const [reveal, setReveal] = useState(false);
+  const onScreen = useOnScreen(ref);
+
+  useEffect(() => {
+    if (onScreen) setReveal(onScreen);
+  }, [onScreen]);
+
+  useEffect(() => {
+    const tl = gsap.timeline({});
+    if (reveal) {
+      const split = new SplitText('.cta__p, .cta__title', {
+        type: 'lines',
+        linesClass: 'split-child',
+      });
+
+      const splitParent = new SplitText('.cta__p, .cta__title', {
+        linesClass: 'split-parent',
+      });
+
+      tl.from(
+        split.lines,
+        {
+          duration: 1.2,
+          yPercent: 100,
+          ease: 'power4',
+          stagger: 0.2,
+        },
+        '<0.4'
+      );
+    }
+  }, [reveal]);
+
   return (
-    <CtaContainer data-scroll-section>
+    <CtaContainer data-scroll-section ref={ref}>
       <CtaInner>
         <div className="gif">
           <svg
@@ -19,13 +57,21 @@ export default function Cta() {
             />
           </svg>
         </div>
-
+        {/* 
         <p className="cta__p">
           <span>Never have to worry about the safety OR</span>{' '}
           <span>
             QUALITY of the products that you choose to put in your home.
           </span>
-        </p>
+        </p> */}
+
+        <div>
+          <p className={cn('cta__p', { 'is-inview': reveal })} data-scroll>
+            Never have to worry about the safety OR <br />
+            QUALITY of the products that <br />
+            you choose to put in your home.
+          </p>
+        </div>
 
         <div className="small-img-cont">
           <div className="b-speed-block" data-scroll>
@@ -43,12 +89,16 @@ export default function Cta() {
           </div>
         </div>
 
-        <CtaTitle>
-          At fivensix, we focus on things <br />
-          that are really <span className="">important</span> to us
-          <br />
-          your body and your scent
-        </CtaTitle>
+        <div className="title_container">
+          <h1
+            className={cn('cta__title', { 'is-inview': reveal })}
+            data-scroll-offset="0, 900">
+            At fivensix, we focus on things <br />
+            that are really important to us <br />
+            <br />
+            your body and your scent
+          </h1>
+        </div>
 
         <button type="button" className="main-button">
           Learn more
@@ -64,6 +114,8 @@ const CtaContainer = styled.section`
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  
+  
 `;
 
 const CtaInner = styled.div`
@@ -103,7 +155,6 @@ const CtaInner = styled.div`
     transform-origin: top center;
     overflow: hidden;
     position: relative;
-  
 
     @media screen and (max-width: 999px) {
       width: 66.66667%;
@@ -119,21 +170,48 @@ const CtaInner = styled.div`
   }
 
   .cta__p {
-    @media screen and (min-width: 700px) {
+    /* @media screen and (min-width: 700px) {
       max-width: 42.55222rem;
     }
-    max-width: 30.55222rem;
-    display: inline-block;
-    line-height: 1.15;
+    max-width: 30.55222rem; */
+    line-height: 1.2;
     text-align: center;
     font-weight: 500;
     text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 1s $easing;
+
+    & > div {
+      position: relative;
+    }
+    &.is-inview {
+      opacity: 1;
+      transition-delay: 0.4s;
+    }
+  }
+
+  .title_container {
+    margin-bottom: var(--spacing-large);
+
+    .cta__title {
+      text-align: center;
+      line-height: 100%;
+      opacity: 0;
+      transition: opacity 1s $easing;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.05em;
+      position: relative;
+      overflow: hidden;
+      font-weight: 500;
+
+      & > div {
+        position: relative;
+      }
+      &.is-inview {
+        opacity: 1;
+        transition-delay: 0.4s;
+      }
+    }
   }
 `;
 
-const CtaTitle = styled.h1`
-  text-align: center;
-  line-height: 1.1;
-  margin-bottom: var(--spacing-large);
-  /* text-transform: uppercase; */
-`;

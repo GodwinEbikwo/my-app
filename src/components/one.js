@@ -1,60 +1,40 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import SplitText from '../utils/Split3.min';
+import cn from 'classnames';
+import useOnScreen from '../lib/useOnScreen';
 
 export default function One() {
   const ref = useRef(null);
-
-  // useEffect(() => {
-  //   const split = new SplitText('h1', {
-  //     type: 'lines',
-  //     linesClass: 'split-child',
-  //   });
-
-  //   const splitParent = new SplitText('h1', {
-  //     // type: 'lines',
-  //     linesClass: 'split-parent',
-  //   });
-
-  //   gsap.from(split.lines, {
-  //     duration: 1.2,
-  //     yPercent: 100,
-  //     ease: 'power4',
-  //     stagger: 0.2,
-  //   });
-  // }, []);
+  const [reveal, setReveal] = useState(false);
+  const onScreen = useOnScreen(ref);
 
   useEffect(() => {
-    const el = ref.current;
+    if (onScreen) setReveal(onScreen);
+  }, [onScreen]);
+
+  useEffect(() => {
     const tl = gsap.timeline({});
-    const split = new SplitText('h1, .content-para', {
-      type: 'lines',
-      linesClass: 'split-child',
-    });
 
-    const splitParent = new SplitText('h1, .content-para', {
-      // type: 'lines',
-      linesClass: 'split-parent',
-    });
+    if (reveal) {
+      const split = new SplitText('h1, .content-para', {
+        type: 'lines',
+        linesClass: 'split-child',
+      });
 
-    tl.from(
-      split.lines,
-      {
+      const splitParent = new SplitText('h1, .content-para', {
+        linesClass: 'split-parent',
+      });
+
+      tl.from(split.lines, {
         duration: 1.2,
         yPercent: 100,
         ease: 'power4',
         stagger: 0.2,
-      },
-      '<0.2'
-    ).from(
-      el.querySelector('.smiley'),
-      {
-        y: -50,
-        ease: 'power4',
-      },
-    );
-  }, []);
+      });
+    }
+  }, [reveal]);
 
   return (
     <section className="one" data-scroll-section ref={ref}>
@@ -84,26 +64,12 @@ export default function One() {
             </div>
 
             <div>
-              <p className="content-para">
+              <p className={cn('content-para', { 'is-inview': reveal })}>
                 ...BASED UNDER THE COLD IN BARNSLEY <br />
                 UNITED KINGDOM, THE CITY OF FARMERS AND THE <br /> MORE FAMOUS
                 JOHN BARNES
               </p>
             </div>
-
-            {/* <div className="o-middle" data-scroll>
-              <p>
-                <span>...BASED UNDER THE COLD IN BARNSLEY,</span> <br />
-                <span> UNITED KINGDOM, THE CITY OF FARMERS AND THE</span> <br />
-                <span>MORE FAMOUS JOHN BARNES</span>
-              </p>
-
-              <p>
-                <span>OUR ONLINE STORE OPENED IN 2021, JUST </span> <br />
-                <span>MONTHS AFTER, WE GOT THE</span> <br />
-                <span>VACCINE</span>
-              </p>
-            </div> */}
 
             <div className="gif">
               <svg
@@ -133,44 +99,49 @@ export default function One() {
             </div>
 
             <div>
-              <p className="content-para">
+              <p
+                className={cn('content-para', { 'is-inview': reveal })}
+                data-scroll>
                 WE BUILD KNITTED BAGS, AND HANDGLOVES,
                 <br />
                 WE TAKE CUSTOM ORDERS IN ADVANCE <br /> AND ARE LOOKING TO ADD
                 MORE INVENTORY
               </p>
 
-              <p className="content-para">
+              <p
+                className={cn('content-para', { 'is-inview': reveal })}
+                data-scroll>
                 EVERYPIECE WE CRAFT IS HANDMADE
                 <br />
                 WITH LOVE AND ATTENTION <br />
               </p>
             </div>
 
-            {/* <div className="o-middle" data-scroll>
-              <p>
-                <span>WE BUILD KNITTED BAGS, AND HANDGLOVES,</span> <br />
-                <span>WE TAKE CUSTOM ORDERS IN ADVANCE</span> <br />
-                <span>AND ARE LOOKING TO ADD MORE INVENTORY</span>
-              </p>
-
-              <p>
-                <span>EVERYPIECE WE CRAFT IS HANDMADE</span> <br />
-                <span>WITH LOVE AND ATTENTION</span> <br />
-              </p>
-            </div> */}
-
             <div>
-              <p className="content-para">
+              <p className={cn('content-para', { 'is-inview': reveal })}>
                 IN A NUT SHELL <br />
                 THIS IS WHAT WE DO
               </p>
             </div>
 
-            <div className="o-middle clouds" data-scroll>
-              <div className="flex ai-jc icon">
-                <p>↓</p>
-              </div>
+            <div>
+              <p
+                className={cn('content-para', { 'is-reveal': reveal })}
+                data-scroll>
+                ...BASED UNDER THE COLD IN BARNSLEY <br />
+                UNITED KINGDOM, THE CITY OF FARMERS AND THE <br /> MORE FAMOUS
+                JOHN BARNES
+              </p>
+            </div>
+
+            <div>
+              <p
+                className={cn('content-para', { 'is-inview': reveal })}
+                data-scroll>
+                ...BASED UNDER THE COLD IN BARNSLEY <br />
+                UNITED KINGDOM, THE CITY OF FARMERS AND THE <br /> MORE FAMOUS
+                JOHN BARNES
+              </p>
             </div>
 
             <div className="img-container">
@@ -186,6 +157,12 @@ export default function One() {
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="o-middle clouds" data-scroll>
+              <div className="flex ai-jc icon">
+                <p>↓</p>
               </div>
             </div>
           </div>
