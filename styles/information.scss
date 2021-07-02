@@ -1,9 +1,10 @@
 .information {
   .information_grid {
     position: relative;
-    display: grid;
-    gap: 0;
+
     @media screen and (min-width: $from-small) {
+      display: grid;
+      gap: 0;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr;
     }
@@ -49,6 +50,17 @@
       line-height: 100%;
       margin-bottom: var(--spacing-medium);
       will-change: transform;
+      opacity: 0;
+      transition: opacity 1s $easing;
+
+      & > div {
+        position: relative;
+      }
+
+      &.is-inview {
+        opacity: 1;
+        transition-delay: 0.4s;
+      }
     }
 
     p {

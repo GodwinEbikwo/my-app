@@ -2,6 +2,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import useOnScreen from '../lib/useOnScreen';
+import cn from 'classnames';
 import SplitText from '../utils/Split3.min';
 
 export function Information() {
@@ -38,7 +39,6 @@ export function Information() {
     }
   }, [reveal]);
 
-
   return (
     <section className="information" data-scroll-section ref={ref}>
       <div className="information_grid">
@@ -61,20 +61,30 @@ export function Information() {
 
         <aside className="information_right flex ai-jc fd-c">
           <div className="inforight_inner">
-            <h1 className="inforight_title span_overflow">
+            <h1 className={cn('inforight_title', { 'is-inview': reveal })}>
+              Environmentally responsible,
+              <br />
+              ethically-conscious
+            </h1>
+            {/* <h1 className="inforight_title span_overflow">
               <span className="span_inner">
                 Environmentally responsible,
                 <br />
                 ethically-conscious
               </span>
-            </h1>
+            </h1> */}
 
-            <p className="info_para span_overflow">
+            {/* <p className="info_para span_overflow">
               <span className="span_inner">
                 We are a carbon neutral company & products and certified
                 <br />
                 cruelty-free brand with a foucs on ustainable packaging.
               </span>
+            </p> */}
+            <p className={cn('info_para', { 'is-inview': reveal })}>
+              We are a carbon neutral company & products and certified
+              <br />
+              cruelty-free brand with a foucs on ustainable packaging.
             </p>
 
             <button type="button" className="main-button">
