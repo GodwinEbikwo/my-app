@@ -18,12 +18,12 @@ export default function Cta() {
   useEffect(() => {
     const tl = gsap.timeline({delay: 0.3});
     if (reveal) {
-      const split = new SplitText('.cta__p, .cta__title', {
+      const split = new SplitText('.cta__p', {
         type: 'lines',
         linesClass: 'split-child',
       });
 
-      const splitParent = new SplitText('.cta__p, .cta__title', {
+      const splitParent = new SplitText('.cta__p', {
         linesClass: 'split-parent',
       });
 
@@ -91,7 +91,7 @@ export default function Cta() {
 
         <div className="title_container">
           <p
-            className={cn('cta__title', { 'is-inview': reveal })}
+            className={cn('cta__p', { 'is-inview': reveal })}
             data-scroll-offset="0, 100">
             At fivensix, we focus on things <br />
             that are really important to us
@@ -200,7 +200,7 @@ const CtaInner = styled.div`
       letter-spacing: -0.05em;
       position: relative;
       overflow: hidden;
-      font-size: 3rem;
+      /* font-size: 3rem; */
 
       & > div {
         position: relative;
